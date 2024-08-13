@@ -19,78 +19,62 @@ Before running the script, ensure you have the following installed:
   ```bash
   pip install cdsapi
   
-Setting Up the .cdsapirc File
-To authenticate with the CDS API, you need to create a .cdsapirc file in your home directory. This file should contain your API credentials, which can be obtained from the CDS website.
+## Setting Up the `.cdsapirc` File
 
-Steps to Create the .cdsapirc File:
-Register or Log In to Your CDS Account:
+To authenticate with the CDS API, you need to create a `.cdsapirc` file in your home directory. This file should contain your API credentials, which can be obtained from the CDS website.
 
-Go to the CDS login page.
-If you don't have an account, create one.
-Get Your API Key:
+### Steps to Create the `.cdsapirc` File:
 
-After logging in, visit the API key page.
-Copy the API key provided.
-Create the .cdsapirc File:
+1. **Register or Log In to Your CDS Account:**
 
-In your home directory, create a file named .cdsapirc and paste the following:
-url: https://cds.climate.copernicus.eu/api/v2key: <UID>:<API_KEY>
+   - Go to the CDS login page.
+   - If you don't have an account, create one.
 
-Usage Instructions
-1. Clone the Repository
+2. **Get Your API Key:**
+
+   - After logging in, visit the API key page.
+   - Copy the API key provided.
+
+3. **Create the `.cdsapirc` File:**
+
+   - In your home directory, create a file named `.cdsapirc` and paste the following:
+
+     ```plaintext
+     url: https://cds.climate.copernicus.eu/api/v2
+     key: <UID>:<API_KEY>
+     ```
+
+### Usage Instructions
+
+#### Clone the Repository
+
 First, clone the repository to your local machine:
 
-Usage Instructions
-1. Clone the Repository
-First, clone the repository to your local machine:
+```bash
+git clone https://github.com/JuanCrls17/ERA5-Land-Data-Downloader.git
+cd ERA5-Land-Data-Downloader
+### Important Notes
 
-2. Customize the Script
-Before running the script, you may want to customize the time period and geographic area for which you wish to download data. Open the script and adjust the following variables as needed:
+- **API Rate Limits**: The CDS API has usage limits. Excessive requests or continuous retries may result in temporary blocking of your IP. Always monitor your API usage.
+- **Keep Your Environment Up to Date**: Regularly update your Python environment and the `cdsapi` library to avoid potential issues with API requests.
 
-years: List of years you want to download data for (e.g., [2008]).
-months: List of months you want to download data for (e.g., [1]).
-area: Geographic bounding box defined as [north, west, south, east].
-variables: List of variables to be downloaded (e.g., ['10m_u_component_of_wind', '2m_temperature']).
-3. Run the Script
-Once customized, you can run the script:
+### External Resources
 
-python Era_Downld_enhanced-V3.ipynb
-
-4. Monitor the Logs
-The script generates two log files:
-
-last_download.txt: Logs the last successfully downloaded file.
-all_logs.txt: Logs all download attempts, including errors.
-These logs are essential for tracking the download process and diagnosing any issues.
-
-Example Configuration
-Below is an example configuration that you might use within the script:
-
-years = [2008]
-months = [1]
-days = range(1, 32)
-hours = range(24)
-
-area = [-10, -77, -12, -75]  # Specify the geographic area
-variables = [
-    '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_dewpoint_temperature',
-    '2m_temperature', 'surface_pressure', 'surface_solar_radiation_downwards',
-    'surface_thermal_radiation_downwards', 'total_precipitation',
-]
-Important Notes
-API Rate Limits: The CDS API has usage limits. Excessive requests or continuous retries may result in temporary blocking of your IP. Always monitor your API usage.
-Keep Your Environment Up to Date: Regularly update your Python environment and the cdsapi library to avoid potential issues with API requests.
-External Resources
 For more detailed information about the ERA5-Land reanalysis data and the Climate Data Store, visit the following links:
 
-CDS API Documentation
-ERA5-Land Overview
-License
+- [CDS API Documentation](https://cds.climate.copernicus.eu/api-how-to)
+- [ERA5-Land Overview](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land)
+
+### License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contributing
+### Contributing
+
 Contributions are welcome! If you have suggestions or improvements, feel free to submit a pull request or open an issue.
 
-Acknowledgments
-ECMWF: For providing the ERA5-Land reanalysis dataset.
-Copernicus Climate Change Service: For their support and data services.
+### Acknowledgments
+
+- **ECMWF**: For providing the ERA5-Land reanalysis dataset.
+- **Copernicus Climate Change Service**: For their support and data services.
+
