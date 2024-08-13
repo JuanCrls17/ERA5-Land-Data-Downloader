@@ -1,4 +1,4 @@
-# ERA5-Land Data Downloader
+#ERA5-Land Data Downloader
 
 This repository contains a Python-based tool designed to efficiently download ERA5-Land reanalysis data from the Climate Data Store (CDS) using the CDS API. The script, `Era_Downld_enhanced-V3.ipynb`, offers enhanced features such as concurrent downloading, robust error handling, and detailed logging, making it a reliable and efficient solution for managing large-scale climate data downloads.
 
@@ -44,37 +44,49 @@ To authenticate with the CDS API, you need to create a `.cdsapirc` file in your 
      key: <UID>:<API_KEY>
      ```
 
-### Usage Instructions
+## Usage Instructions
 
-#### Clone the Repository
+## Clone the Repository
 
 First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/JuanCrls17/ERA5-Land-Data-Downloader.git
 cd ERA5-Land-Data-Downloader
-### Important Notes
+
+---
+
+## Important Notes
 
 - **API Rate Limits**: The CDS API has usage limits. Excessive requests or continuous retries may result in temporary blocking of your IP. Always monitor your API usage.
 - **Keep Your Environment Up to Date**: Regularly update your Python environment and the `cdsapi` library to avoid potential issues with API requests.
 
-### External Resources
+---
 
+## External Resources
 For more detailed information about the ERA5-Land reanalysis data and the Climate Data Store, visit the following links:
 
 - [CDS API Documentation](https://cds.climate.copernicus.eu/api-how-to)
 - [ERA5-Land Overview](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land)
 
-### License
+---
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-### Contributing
+---
+
+##Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to submit a pull request or open an issue.
 
-### Acknowledgments
+---
+
+## Acknowledgments
 
 - **ECMWF**: For providing the ERA5-Land reanalysis dataset.
 - **Copernicus Climate Change Service**: For their support and data services.
+
+---
 
