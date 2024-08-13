@@ -1,3 +1,5 @@
+![GFS Example](image/Era_land.png)
+
 # ERA5-Land Data Downloader
 
 This repository contains a Python-based tool designed to efficiently download ERA5-Land reanalysis data from the Climate Data Store (CDS) using the CDS API. The script, `Era_Downld_enhanced-V3.ipynb`, offers enhanced features such as concurrent downloading, robust error handling, and detailed logging, making it a reliable and efficient solution for managing large-scale climate data downloads.
