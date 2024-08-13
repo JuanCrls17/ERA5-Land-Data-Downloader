@@ -15,8 +15,10 @@ Before running the script, ensure you have the following installed:
 
 - **Python 3.x**
 - **cdsapi library**: This library is required to interact with the CDS API.
+
   ```bash
   pip install cdsapi
+  
 Setting Up the .cdsapirc File
 To authenticate with the CDS API, you need to create a .cdsapirc file in your home directory. This file should contain your API credentials, which can be obtained from the CDS website.
 
@@ -32,19 +34,16 @@ Copy the API key provided.
 Create the .cdsapirc File:
 
 In your home directory, create a file named .cdsapirc and paste the following:
-plaintext
-Copiar código
-url: https://cds.climate.copernicus.eu/api/v2
-key: <UID>:<API_KEY>
-Replace <UID> and <API_KEY> with the values provided by the CDS.
+url: https://cds.climate.copernicus.eu/api/v2key: <UID>:<API_KEY>
+
 Usage Instructions
 1. Clone the Repository
 First, clone the repository to your local machine:
 
-bash
-Copiar código
-git clone https://github.com/JuanCrls17/ERA5-Land-Data-Downloader.git
-cd ERA5-Land-Data-Downloader
+Usage Instructions
+1. Clone the Repository
+First, clone the repository to your local machine:
+
 2. Customize the Script
 Before running the script, you may want to customize the time period and geographic area for which you wish to download data. Open the script and adjust the following variables as needed:
 
@@ -55,9 +54,8 @@ variables: List of variables to be downloaded (e.g., ['10m_u_component_of_wind',
 3. Run the Script
 Once customized, you can run the script:
 
-bash
-Copiar código
 python Era_Downld_enhanced-V3.ipynb
+
 4. Monitor the Logs
 The script generates two log files:
 
@@ -68,8 +66,6 @@ These logs are essential for tracking the download process and diagnosing any is
 Example Configuration
 Below is an example configuration that you might use within the script:
 
-python
-Copiar código
 years = [2008]
 months = [1]
 days = range(1, 32)
@@ -98,20 +94,3 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 Acknowledgments
 ECMWF: For providing the ERA5-Land reanalysis dataset.
 Copernicus Climate Change Service: For their support and data services.
-markdown
-Copiar código
-
-### Explanation of Each Section:
-
-1. **Features**: Lists the key capabilities of your script, emphasizing its advanced functionality.
-2. **Prerequisites**: Details the necessary software dependencies.
-3. **Setting Up the `.cdsapirc` File**: Guides users on how to authenticate with the CDS API.
-4. **Usage Instructions**: Provides a step-by-step guide on how to clone the repository, customize the script, and run it.
-5. **Example Configuration**: Gives users a ready-made example configuration they can quickly adapt.
-6. **Important Notes**: Alerts users to potential issues, such as API rate limits, and advises on keeping their environment up to date.
-7. **External Resources**: Links to additional information that users might find useful.
-8. **License**: Mentions the licensing under which your code is released.
-9. **Contributing**: Invites others to contribute to the project.
-10. **Acknowledgments**: Credits the organizations and services that provided data and support.
-
-This `README.md` provides a professional and comprehensive overview of your project, en
